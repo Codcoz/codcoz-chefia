@@ -1,0 +1,17 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Cache do Python
+_pycache_/
+*.py[cod]
+
+# Arquivos sensíveis
+.env
+*.env
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
