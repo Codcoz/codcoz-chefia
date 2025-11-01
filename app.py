@@ -17,10 +17,12 @@ from pytz import timezone
 from mongo_tools import RECEITAS_TOOLS
 from pg_tools import TAREFAS_TOOLS
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 # Dicionário para armazenar o histórico de mensgens
 store = {}
@@ -497,23 +499,3 @@ def health_check():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-# while True:
-#     user_input = input('> ')
-#     if user_input.lower() in ('sair', 'end', 'fim', 'tchau', 'bye'):
-#         print('Encerrando a conversa...')
-#         break
-#     try:
-        
-#         # Chama a função orquestradora que executa o fluxo completo (Roteador -> Especialista -> Orquestrador)
-#         resposta = executar_fluxo_chefia(
-#             pergunta_usuario=user_input,
-#             session_id="",
-#             empresa_id=empresa_id,
-#             gestor_id=gestor_id
-#         )
-
-#         print(resposta)
-        
-#     except Exception as e:
-#         print('Erro ao consumir a API: ', e)
