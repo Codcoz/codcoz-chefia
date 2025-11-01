@@ -1,0 +1,11 @@
+pydantic==2.11.7
+langchain==0.3.27
+langchain-community==0.3.29
+langchain-core==0.3.75
+langchain-google-genai==2.1.10
+
+pytz
+pymongo
+psycopg2
+Flask
+gunicorn
